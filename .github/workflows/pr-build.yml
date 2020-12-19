@@ -29,4 +29,10 @@ jobs:
               dep ensure
           fi
       - name: Build
-        run: cd cmd/proxy/ && go build -v .
+        run: make build-proxy
+
+      - name: Unit Test
+        run: make test
+
+      - name: Upload coverage
+        run: bash <(curl -s https://codecov.io/bash) -f coverage.txt
