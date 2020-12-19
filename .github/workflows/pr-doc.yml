@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Check user permission
         id: check
-        uses: miiu96/action-has-permission@develpment
+        uses: miiu96/action-has-permission@development
         with:
           required-permission: write
         env:
