@@ -290,10 +290,22 @@ func computeShardIDs(shardCoordinator sharding.Coordinator) []uint32 {
 
 	shardIDs = append(shardIDs, core.MetachainShardId)
 
+	functionWithNoCoverage()
+
 	return shardIDs
 }
 
 // IsInterfaceNil returns true if there is no value under the interface
 func (bp *BaseProcessor) IsInterfaceNil() bool {
 	return bp == nil
+}
+
+func functionWithNoCoverage() {
+	counter := 0
+	for {
+		counter++
+		if counter == 5 {
+			break
+		}
+	}
 }
